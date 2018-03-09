@@ -1,3 +1,14 @@
+.dashboard-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .dashboard-wrapper .new-game-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-width: 410px; }
+    .dashboard-wrapper .new-game-wrapper .new-game-list .button.button-positive {
+      width: 100%; }
+
 .board-internal-wrapper {
   display: flex;
   justify-content: space-around; }

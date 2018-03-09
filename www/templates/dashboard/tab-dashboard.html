@@ -1,6 +1,69 @@
 <ion-view view-title="Dashboard">
     <ion-content class="padding">
-        <h1>Welcome to The Connected Darts App!</h1>
-        {{test}}
+        <div class="dashboard-wrapper">
+            <h1>Welcome to The Connected Darts App!</h1>
+            <div class="card">
+                <div class="item item-text-wrap">
+                    <p class="intro-text">
+                        Start a new game by selecting number of players, number of throws per round and the score limit
+                        to win the game.
+                    </p>
+                </div>
+            </div>
+
+            <div class="new-game-wrapper">
+
+                <button class="button button-large button-positive"
+                        ion-ripple
+                        ng-if="!showGameSelectionList"
+                        ng-click="newGameSelectionClick()">
+                    New game
+                </button>
+
+                <div class="new-game-list" ng-if="showGameSelectionList">
+                    <div class="list">
+                        <label class="item item-input item-select">
+                    <span class="input-label">
+                        Number of players
+                    </span>
+                            <select ng-model="selectedNumberOfPlayers"
+                                    ng-options="x for (x, y) in numberOfPlayers"
+                                    ng-init="selectedNumberOfPlayers = numberOfPlayers[2]">
+                            </select>
+                        </label>
+
+                        <label class="item item-input item-select">
+                    <span class="input-label">
+                        Game score limit
+                    </span>
+                            <select>
+                                <option>101</option>
+                                <option selected>301</option>
+                            </select>
+                        </label>
+
+                        <label class="item item-input item-select">
+                    <span class="input-label">
+                        Number of throws per turn
+                    </span>
+                            <select>
+                                <option>3</option>
+                                <option selected>4</option>
+                            </select>
+                        </label>
+
+                    </div>
+
+                    <button class="button button-large button-positive"
+                            ion-ripple>
+                        Start game!
+                    </button>
+
+                    Number of players selected: {{selectedNumberOfPlayers}}
+                </div>
+            </div>
+
+
+        </div>
     </ion-content>
 </ion-view>
