@@ -24,11 +24,12 @@
         background-color: transparent;
         z-index: 1; }
         .board-internal-wrapper .board-wrapper .item-buttons-wrapper .item-button.double-two {
-          margin-bottom: 5px;
-          width: 100px; }
+          margin-bottom: 10px;
+          width: 80px;
+          height: 20px; }
         .board-internal-wrapper .board-wrapper .item-buttons-wrapper .item-button.double-one-top {
           max-height: inherit;
-          height: 100px;
+          height: 95px;
           max-width: 65px;
           margin-bottom: 5px;
           border-bottom-right-radius: 30%;
@@ -69,13 +70,13 @@
           max-height: 55px;
           text-indent: -9999px; }
       .board-internal-wrapper .board-wrapper .item-buttons-wrapper#item-buttons-3 {
-        left: 43%;
-        top: 10px;
-        transform: 0; }
+        left: 44%;
+        top: 13px;
+        transform: none; }
       .board-internal-wrapper .board-wrapper .item-buttons-wrapper#item-buttons-4 {
-        left: 51.5%;
-        top: 15px;
-        transform: rotate(16deg); }
+        left: 52%;
+        top: 19px;
+        transform: rotate(17deg); }
       .board-internal-wrapper .board-wrapper .item-buttons-wrapper#item-buttons-5 {
         left: 59%;
         top: 42px;
@@ -85,7 +86,7 @@
         top: 84px;
         transform: rotate(55deg); }
       .board-internal-wrapper .board-wrapper .item-buttons-wrapper#item-buttons-7 {
-        left: 68%;
+        left: 69%;
         top: 130px;
         transform: rotate(72deg); }
       .board-internal-wrapper .board-wrapper .item-buttons-wrapper#item-buttons-8 {
@@ -93,7 +94,7 @@
         top: 184px;
         transform: rotate(90deg); }
       .board-internal-wrapper .board-wrapper .item-buttons-wrapper#item-buttons-9 {
-        left: 68%;
+        left: 69%;
         top: 237px;
         transform: rotate(107deg); }
       .board-internal-wrapper .board-wrapper .item-buttons-wrapper#item-buttons-10 {
@@ -105,7 +106,7 @@
         top: 325px;
         transform: rotate(142deg); }
       .board-internal-wrapper .board-wrapper .item-buttons-wrapper#item-buttons-12 {
-        left: 51%;
+        left: 52%;
         top: 352px;
         transform: rotate(163deg); }
       .board-internal-wrapper .board-wrapper .item-buttons-wrapper#item-buttons-13 {

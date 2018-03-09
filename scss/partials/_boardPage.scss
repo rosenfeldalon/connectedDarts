@@ -28,13 +28,14 @@
         z-index: 1;
 
         &.double-two {
-          margin-bottom: 5px;
-          width: 100px;
+          margin-bottom: 10px;
+          width: 80px;
+          height: 20px;
         }
 
         &.double-one-top {
           max-height: inherit;
-          height: 100px;
+          height: 95px;
           max-width: 65px;
           margin-bottom: 5px;
           border-bottom-right-radius: 30%;
@@ -93,12 +94,12 @@
 
       // score 20
       &#item-buttons-3 {
-        @include positionBoardItemTop(43%, 10px, 0);
+        @include positionBoardItemTop(44%, 13px, none);
       }
 
       // score 1
       &#item-buttons-4 {
-        @include positionBoardItemTop(51.5%, 15px, rotate(16deg));
+        @include positionBoardItemTop(52%, 19px, rotate(17deg));
       }
 
       // score 18
@@ -113,7 +114,7 @@
 
       // score 13
       &#item-buttons-7 {
-        @include positionBoardItemTop(68%, 130px, rotate(72deg));
+        @include positionBoardItemTop(69%, 130px, rotate(72deg));
       }
 
       // score 9
@@ -123,7 +124,7 @@
 
       // score 6
       &#item-buttons-9 {
-        @include positionBoardItemTop(68%, 237px, rotate(107deg));
+        @include positionBoardItemTop(69%, 237px, rotate(107deg));
       }
 
       // score 15
@@ -138,7 +139,7 @@
 
       // score 17
       &#item-buttons-12 {
-        @include positionBoardItemTop(51%, 352px, rotate(163deg));
+        @include positionBoardItemTop(52%, 352px, rotate(163deg));
       }
 
       // score 3
