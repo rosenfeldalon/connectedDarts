@@ -1,0 +1,9 @@
+@mixin hideTextFromButton() {
+  text-indent: -9999px;
+}
+
+@mixin positionBoardItemTop($left, $top, $rotate) {
+  left: $left;
+  top: $top;
+  transform: $rotate;
+}

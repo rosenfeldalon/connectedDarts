@@ -1,0 +1,45 @@
+<ion-view view-title="Board Game">
+    <ion-content class="padding">
+        <div class="board-internal-wrapper">
+            <div class="board-wrapper">
+
+                <button class="button missed missed-left missed-top" ng-click="missedBoardClick()">
+                    Missed
+                </button>
+
+                <button class="button missed missed-right missed-top" ng-click="missedBoardClick()">
+                    Missed
+                </button>
+
+                <div ng-repeat="item in boardList">
+                    <board-item
+                            data-board-item-id="{{item.id}}"
+                            data-board-item-value="{{item.value}}"
+                            data-board-item-duplicate="{{item.duplicate}}">
+                    </board-item>
+                </div>
+
+                <button class="button missed missed-left missed-bottom" ng-click="missedBoardClick()">
+                    Missed
+                </button>
+
+                <button class="button missed missed-right missed-bottom" ng-click="missedBoardClick()">
+                    Missed
+                </button>
+            </div>
+
+            <div class="score-wrapper">
+                <h3>Scores!</h3>
+
+                <single-player-info>
+
+                </single-player-info>
+
+                <button class="button reset-game"
+                        ng-click="resetTurnClick()">
+                    Reset Turn
+                </button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

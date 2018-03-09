@@ -1,0 +1,26 @@
+<div class="item-buttons-wrapper" id="item-buttons-{{boardItemId}}">
+    <button class="item-button double-two"
+            ion-ripple ion-ripple-color="#387ef5"
+            ng-if="boardItemDuplicate"
+            ng-click="itemScoreClick(boardItemValue, 2)">
+    </button>
+
+    <button class="item-button double-one-top"
+            ion-ripple ion-ripple-color="#387ef5"
+            ng-click="itemScoreClick(boardItemValue, 1)">
+    </button>
+
+    <button class="item-button double-three"
+            ion-ripple ion-ripple-color="#387ef5"
+            ng-if="boardItemDuplicate"
+            ng-click="itemScoreClick(boardItemValue, 3)">
+    </button>
+
+    <button class="item-button double-one-bottom"
+            ion-ripple ion-ripple-color="#387ef5"
+            ng-if="boardItemDuplicate"
+            ng-click="itemScoreClick(boardItemValue, 1)">
+    </button>
+</div>
+
+

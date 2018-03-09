@@ -1,0 +1,225 @@
+.board-internal-wrapper {
+  display: flex;
+  justify-content: space-around;
+
+  .board-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 662px;
+    height: 662px;
+    border: 1px dashed red;
+    background-image: url("../../www/images/dart-board.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    .item-buttons-wrapper {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      height: 295px;
+      align-items: center;
+
+      .item-button {
+        width: 100%;
+        height: 100%;
+        max-height: 25px;
+        max-width: 90px;
+        background-color: transparent;
+        z-index: 1;
+
+        &.double-two {
+          margin-bottom: 5px;
+          width: 100px;
+        }
+
+        &.double-one-top {
+          max-height: inherit;
+          height: 100px;
+          max-width: 65px;
+          margin-bottom: 5px;
+          border-bottom-right-radius: 30%;
+          border-bottom-left-radius: 30%;
+        }
+
+        &.double-three {
+          max-width: 50px;
+          margin-bottom: 5px;
+        }
+
+        &.double-one-bottom {
+          height: inherit;
+          max-height: 110px;
+          max-width: 15px;
+          border-bottom-left-radius: 50%;
+          border-bottom-right-radius: 50%;
+          border-color: red;
+        }
+      }
+
+      // score 50
+      &#item-buttons-1 {
+        top: 48.9%;
+        left: 48.5%;
+        width: 20px;
+        height: 20px;
+
+        .item-button {
+          border-radius: 50%;
+          background-color: $red;
+          border-color: $red;
+          margin-bottom: 0;
+          z-index: 9;
+          @include hideTextFromButton;
+        }
+      }
+
+      // score 25
+      &#item-buttons-2 {
+        top: 46%;
+        left: 46%;
+        width: 55px;
+        height: 55px;
+
+        .item-button {
+          border-radius: 50%;
+          background-color: $green;
+          border-color: $green;
+          margin-bottom: 0;
+          z-index: 5;
+          max-height: 55px;
+          @include hideTextFromButton;
+        }
+      }
+
+      // score 20
+      &#item-buttons-3 {
+        @include positionBoardItemTop(43%, 10px, 0);
+      }
+
+      // score 1
+      &#item-buttons-4 {
+        @include positionBoardItemTop(51.5%, 15px, rotate(16deg));
+      }
+
+      // score 18
+      &#item-buttons-5 {
+        @include positionBoardItemTop(59%, 42px, rotate(35deg));
+      }
+
+      // score 4
+      &#item-buttons-6 {
+        @include positionBoardItemTop(65%, 84px, rotate(55deg));
+      }
+
+      // score 13
+      &#item-buttons-7 {
+        @include positionBoardItemTop(68%, 130px, rotate(72deg));
+      }
+
+      // score 9
+      &#item-buttons-8 {
+        @include positionBoardItemTop(70%, 184px, rotate(90deg));
+      }
+
+      // score 6
+      &#item-buttons-9 {
+        @include positionBoardItemTop(68%, 237px, rotate(107deg));
+      }
+
+      // score 15
+      &#item-buttons-10 {
+        @include positionBoardItemTop(65%, 286px, rotate(127deg));
+      }
+
+      // score 2
+      &#item-buttons-11 {
+        @include positionBoardItemTop(59%, 325px, rotate(142deg));
+      }
+
+      // score 17
+      &#item-buttons-12 {
+        @include positionBoardItemTop(51%, 352px, rotate(163deg));
+      }
+
+      // score 3
+      &#item-buttons-13 {
+        @include positionBoardItemTop(43%, 358px, rotate(179deg));
+      }
+
+      // score 19
+      &#item-buttons-14 {
+        @include positionBoardItemTop(35%, 350px, rotate(197deg));
+      }
+
+      // score 7
+      &#item-buttons-15 {
+        @include positionBoardItemTop(27%, 327px, rotate(217deg));
+      }
+
+      // score 16
+      &#item-buttons-16 {
+        @include positionBoardItemTop(22%, 287px, rotate(233deg));
+      }
+
+      // score 8
+      &#item-buttons-17 {
+        @include positionBoardItemTop(18%, 237px, rotate(253deg));
+      }
+
+      // score 11
+      &#item-buttons-18 {
+        @include positionBoardItemTop(17%, 184px, rotate(270deg));
+      }
+
+      // score 14
+      &#item-buttons-19 {
+        @include positionBoardItemTop(18%, 130px, rotate(288deg));
+      }
+
+      // score 9
+      &#item-buttons-20 {
+        @include positionBoardItemTop(22%, 78px, rotate(306deg));
+      }
+
+      // score 12
+      &#item-buttons-21 {
+        @include positionBoardItemTop(28%, 44px, rotate(323deg));
+      }
+
+      // score 5
+      &#item-buttons-22 {
+        @include positionBoardItemTop(35%, 17px, rotate(342deg));
+      }
+    }
+
+    .button {
+      &.missed {
+        position: absolute;
+
+        &.missed-top {
+          top: 10px;
+        }
+
+        &.missed-right {
+          right: 10px;
+        }
+
+        &.missed-bottom {
+          bottom: 10px;
+        }
+
+        &.missed-left {
+          left: 10px;
+        }
+
+      }
+    }
+
+  }
+
+  .score-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+  }
+}
