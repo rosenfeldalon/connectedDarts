@@ -26,9 +26,9 @@
                     <span class="input-label">
                         Number of players
                     </span>
-                            <select ng-model="selectedNumberOfPlayers"
-                                    ng-options="x for (x, y) in numberOfPlayers"
-                                    ng-init="selectedNumberOfPlayers = numberOfPlayers[2]">
+                            <select ng-model="newGame.selectedNumberOfPlayers"
+                                    ng-options="x.value for x in numberOfPlayersArray"
+                                    ng-init="newGame.selectedNumberOfPlayers = numberOfPlayersArray[1]">
                             </select>
                         </label>
 
@@ -36,9 +36,9 @@
                     <span class="input-label">
                         Game score limit
                     </span>
-                            <select>
-                                <option>101</option>
-                                <option selected>301</option>
+                            <select ng-model="newGame.selectedGameScoreLimit"
+                                    ng-options="x.value for x in gameScoreLimitArray"
+                                    ng-init="newGame.selectedGameScoreLimit = gameScoreLimitArray[1]">
                             </select>
                         </label>
 
@@ -46,20 +46,23 @@
                     <span class="input-label">
                         Number of throws per turn
                     </span>
-                            <select>
-                                <option>3</option>
-                                <option selected>4</option>
+                            <select ng-model="newGame.selectedNumberOfThrows"
+                                    ng-options="x.value for x in throwsPerTurnArray"
+                                    ng-init="newGame.selectedNumberOfThrows = throwsPerTurnArray[1]">
                             </select>
                         </label>
 
                     </div>
 
                     <button class="button button-large button-positive"
-                            ion-ripple>
+                            ion-ripple
+                            ng-click="startNewGameClick()">
                         Start game!
                     </button>
 
-                    Number of players selected: {{selectedNumberOfPlayers}}
+                    Number of players selected: {{newGame.selectedNumberOfPlayers}} <br>
+                    Game Score Limit selected: {{newGame.selectedGameScoreLimit}} <br>
+                    Selected Number Of Throws: {{newGame.selectedNumberOfThrows}}
                 </div>
             </div>
 

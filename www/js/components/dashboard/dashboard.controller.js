@@ -3,8 +3,8 @@ angular.module('dartsApp.dashboardCtrl', [])
     .controller('dashboardCtrl', function ($scope) {
 
         $scope.$on('$ionicView.enter', function(){
-            console.warn('dashboard CTLR on Enter...');
-
+            //console.warn('dashboard CTLR on Enter...');
+            $scope.newGame = {};
             $scope.showGameSelectionList = false;
         });
 
@@ -13,16 +13,29 @@ angular.module('dartsApp.dashboardCtrl', [])
             $scope.showGameSelectionList = true;
         };
 
-        $scope.numberOfPlayers = {
-            1: "One player",
-            2: "Two players",
-            3: "Three players",
-            4: "Four players",
-            5: "Five players"
-        }
+        $scope.numberOfPlayersArray = [
+            {key: 1, value: "One player"},
+            {key: 2, value: "Two player"},
+            {key: 3, value: "Three player"},
+            {key: 4, value: "Four player"},
+            {key: 5, value: "Five player"}
+        ];
 
-        // todo: add score limit, number of throws to options
-        // todo: gather all the selections in ng-model form and submit to local storage
+        $scope.gameScoreLimitArray = [
+            {key: 1, value: 101},
+            {key: 2, value: 301}
+        ];
+
+        $scope.throwsPerTurnArray = [
+            {key: 1, value: "Three Throws"},
+            {key: 2, value: "Four Throws"}
+        ];
+
+        $scope.startNewGameClick = function () {
+            localStorage.setItem('newGmaeInfo', angular.toJson($scope.newGame));
+          console.warn('new game clicked: ', $scope.newGame);
+        };
+
 
     });
 

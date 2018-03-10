@@ -4,6 +4,7 @@ angular.module('dartsApp', [
 
     'dartsApp.dashboardCtrl',
     'dartsApp.boardPageCtrl',
+    'dartsApp.settingsCtrl',
 
     'dartsApp.directive.boardItem',
     'dartsApp.directive.singlePlayerInfo',
@@ -59,6 +60,16 @@ angular.module('dartsApp', [
                     'tab-board': {
                         templateUrl: 'templates/boardPage/tab-board.html',
                         controller: 'boardPageCtrl'
+                    }
+                }
+            })
+
+            .state('tab.settings', {
+                url: '/settings',
+                views: {
+                    'tab-settings': {
+                        templateUrl: 'templates/settings/tab-settings.html',
+                        controller: 'settingsCtrl'
                     }
                 }
             });
