@@ -5,11 +5,13 @@ angular.module('dartsApp', [
     'dartsApp.dashboardCtrl',
     'dartsApp.boardPageCtrl',
     'dartsApp.settingsCtrl',
+    'dartsApp.playersCtrl',
 
     'dartsApp.directive.boardItem',
     'dartsApp.directive.singlePlayerInfo',
 
-    'services.boardItemsService'
+    'services.boardItemsService',
+    'services.singlePlayerService'
 ])
 
     .run(function ($ionicPlatform) {
@@ -60,6 +62,16 @@ angular.module('dartsApp', [
                     'tab-board': {
                         templateUrl: 'templates/boardPage/tab-board.html',
                         controller: 'boardPageCtrl'
+                    }
+                }
+            })
+
+            .state('tab.players', {
+                url: '/players',
+                views: {
+                    'tab-players': {
+                        templateUrl: 'templates/players/tab-players.html',
+                        controller: 'playersCtrl'
                     }
                 }
             })

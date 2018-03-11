@@ -1,6 +1,7 @@
 .board-internal-wrapper {
   display: flex;
   justify-content: space-around;
+  z-index: 0;
 
   .board-wrapper {
     position: relative;
@@ -11,6 +12,7 @@
     background-image: url("../../www/images/dart-board.jpg");
     background-repeat: no-repeat;
     background-size: contain;
+    z-index: 1;
 
     .item-buttons-wrapper {
       display: flex;

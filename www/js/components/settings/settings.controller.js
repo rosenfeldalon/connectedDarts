@@ -3,14 +3,14 @@ angular.module('dartsApp.settingsCtrl', [])
     .controller('settingsCtrl', function ($scope, $ionicPopup, $window) {
 
         $scope.$on('$ionicView.enter', function(){
-            console.warn('settings CTLR on Enter...');
+            //console.warn('settings CTLR on Enter...');
         });
 
         $scope.showLocalStoragePopUp = function() {
             $scope.localStorageData = {};
             $scope.adminPassword = "alonthegreat";
 
-            // An elaborate, custom popup
+            // local storage popup
             var localStoragePopUp = $ionicPopup.show({
                 template: '<input type="password" ng-model="localStorageData.password">',
                 title: 'Enter Admin Password',
@@ -23,7 +23,7 @@ angular.module('dartsApp.settingsCtrl', [])
                         type: 'button-positive',
                         onTap: function(e) {
                             if (!$scope.localStorageData.password) {
-                                //don't allow the user to close unless he enters wifi password
+                                //don't allow the user to close unless he enters admin password
                                 e.preventDefault();
                             } else {
                                 if ($scope.localStorageData.password !== $scope.adminPassword) {

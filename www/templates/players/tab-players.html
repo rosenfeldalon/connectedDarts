@@ -1,0 +1,29 @@
+<ion-view view-title="Players">
+    <ion-content class="padding">
+        <div class="players-wrapper">
+            <h1>Players</h1>
+            <div class="card">
+                <div class="item item-text-wrap">
+                    <p class="intro-text">
+                        Create new or select existing player
+                    </p>
+                </div>
+            </div>
+
+            <div class="players-list-wrapper">
+                <ul class="players-list">
+                    <li class="single-player create-new-player">
+                        <button class="button button button-light"
+                                ng-click="createNewPlayerClick()"
+                                ion-ripple>
+                            <span class="new-player-icon">
+                                <i class="ion-ios-personadd"></i>
+                            </span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </ion-content>
+</ion-view>

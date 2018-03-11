@@ -1,6 +1,6 @@
 angular.module('dartsApp.dashboardCtrl', [])
 
-    .controller('dashboardCtrl', function ($scope) {
+    .controller('dashboardCtrl', function ($scope ,$state) {
 
         $scope.$on('$ionicView.enter', function(){
             //console.warn('dashboard CTLR on Enter...');
@@ -32,8 +32,11 @@ angular.module('dartsApp.dashboardCtrl', [])
         ];
 
         $scope.startNewGameClick = function () {
-            localStorage.setItem('newGmaeInfo', angular.toJson($scope.newGame));
-          console.warn('new game clicked: ', $scope.newGame);
+
+            localStorage.setItem('newGameInfo', angular.toJson($scope.newGame));
+            console.warn('new game clicked: ', $scope.newGame);
+
+            $state.go('tab.board');
         };
 
 
