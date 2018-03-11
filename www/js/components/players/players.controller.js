@@ -6,6 +6,7 @@ angular.module('dartsApp.playersCtrl', [])
             //console.warn('players CTLR on Enter...');
         });
 
+        $scope.playersList = [];
 
         $scope.createNewPlayerClick = function () {
             $scope.newPlayerDataModel = {};
@@ -40,9 +41,13 @@ angular.module('dartsApp.playersCtrl', [])
                 console.log('new player created', $scope.newPlayerDataModel);
                 // if there is no players list create one, then push the new player to the array
                 if (!localStorage.getItem('playersList')) {
-                    localStorage.setItem('playersList',  angular.toJson($scope.newPlayerDataModel));
+                    $scope.playersList.push($scope.newPlayerDataModel);
+                    localStorage.setItem('playersList',  angular.toJson($scope.playersList));
                     console.warn('no players in local storage, creating new list');
                 } else {
+                    var temp = angular.fromJson(localStorage.getItem('playersList'));
+                    temp.push($scope.newPlayerDataModel);
+                    localStorage.setItem('playersList',  angular.toJson(temp));
                     console.warn('adding new player to existing list');
                 }
 
