@@ -1,0 +1,12 @@
+<button class="button button button-light"
+        ion-ripple
+        ng-click="selectPlayerClick()">
+    <span class="player-icon">
+        <i class="ion-ios-person-outline"></i>
+    </span>
+    <span class="player-name-details">
+        <span class="player-name" ng-if="playerFirstName">{{playerFirstName}}</span>
+        <span class="player-name" ng-if="playerNickName">"{{playerNickName}}"</span>
+        <span class="player-name" ng-if="playerLastName">{{playerLastName}}</span>
+    </span>
+</button>

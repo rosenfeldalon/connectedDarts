@@ -9,6 +9,7 @@ angular.module('dartsApp', [
 
     'dartsApp.directive.boardItem',
     'dartsApp.directive.singlePlayerInfo',
+    'dartsApp.directive.playerDetails',
 
     'services.boardItemsService',
     'services.singlePlayerService'

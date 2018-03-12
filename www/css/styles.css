@@ -186,16 +186,34 @@
   display: flex;
   flex-direction: column;
   align-items: center; }
-  .players-wrapper .players-list-wrapper .players-list .single-player {
-    width: 200px;
-    height: 200px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  .players-wrapper .players-list-wrapper .players-list {
     display: flex;
-    flex-direction: column;
-    align-items: center; }
-    .players-wrapper .players-list-wrapper .players-list .single-player .button.button-light {
-      width: 100%;
-      height: 100%; }
-    .players-wrapper .players-list-wrapper .players-list .single-player.create-new-player .button.button-light .new-player-icon {
-      color: #387ef5;
-      font-size: 100px; }
+    flex-wrap: wrap; }
+    .players-wrapper .players-list-wrapper .players-list .single-player {
+      width: 200px;
+      height: 200px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-right: 10px;
+      margin-bottom: 10px; }
+      .players-wrapper .players-list-wrapper .players-list .single-player .button.button-light {
+        width: 100%;
+        height: 100%; }
+      .players-wrapper .players-list-wrapper .players-list .single-player.create-new-player .button.button-light .new-player-icon {
+        color: #387ef5;
+        font-size: 100px; }
+      .players-wrapper .players-list-wrapper .players-list .single-player.existing-player player-details {
+        width: 100%;
+        height: 100%; }
+        .players-wrapper .players-list-wrapper .players-list .single-player.existing-player player-details .button.button-light {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center; }
+          .players-wrapper .players-list-wrapper .players-list .single-player.existing-player player-details .button.button-light .player-icon {
+            font-size: 50px;
+            color: #387ef5; }
+      .players-wrapper .players-list-wrapper .players-list .single-player:last-of-type {
+        margin-right: 0; }

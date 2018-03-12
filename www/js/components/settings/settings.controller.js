@@ -9,6 +9,7 @@ angular.module('dartsApp.settingsCtrl', [])
         $scope.showLocalStoragePopUp = function() {
             $scope.localStorageData = {};
             $scope.adminPassword = "alonthegreat";
+            $scope.allowDelete = false;
 
             // local storage popup
             var localStoragePopUp = $ionicPopup.show({
@@ -30,6 +31,7 @@ angular.module('dartsApp.settingsCtrl', [])
                                     console.error('password is wrong!');
                                     e.preventDefault();
                                 } else {
+                                    $scope.allowDelete = true;
                                     return $scope.localStorageData.password;
                                 }
                             }
@@ -40,7 +42,9 @@ angular.module('dartsApp.settingsCtrl', [])
 
             localStoragePopUp.then(function() {
                 console.log('Correct password, local storage data will be erased!');
-                $window.localStorage.clear();
+                if ($scope.allowDelete) {
+                    $window.localStorage.clear();
+                }
             });
             
         };

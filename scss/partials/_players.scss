@@ -4,12 +4,16 @@
   .players-list-wrapper {
 
     .players-list {
+      display: flex;
+      flex-wrap: wrap;
 
       .single-player {
         width: 200px;
         height: 200px;
         box-shadow: $boxShadow;
         @include centerFlexColumn;
+        margin-right: 10px;
+        margin-bottom: 10px;
 
         .button.button-light {
           width: 100%;
@@ -20,10 +24,31 @@
           .button.button-light {
 
             .new-player-icon {
-              color: #387ef5;
+              color: $blue;
               font-size: 100px;
             }
           }
+        }
+
+        &.existing-player {
+          player-details {
+            width: 100%;
+            height: 100%;
+
+            .button.button-light {
+              @include centerFlexColumn;
+              justify-content: center;
+
+              .player-icon {
+                font-size: 50px;
+                color: $blue;
+              }
+            }
+          }
+        }
+
+        &:last-of-type {
+          margin-right: 0;
         }
       }
     }

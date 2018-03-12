@@ -36,10 +36,8 @@ angular.module('dartsApp.dashboardCtrl', [])
             localStorage.setItem('newGameInfo', angular.toJson($scope.newGame));
             console.warn('new game clicked: ', $scope.newGame);
 
-            $state.go('tab.board');
+            $state.go('tab.players');
         };
-
-
     });
 
 

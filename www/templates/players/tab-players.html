@@ -1,7 +1,6 @@
 <ion-view view-title="Players">
     <ion-content class="padding">
         <div class="players-wrapper">
-            <h1>Players</h1>
             <div class="card">
                 <div class="item item-text-wrap">
                     <p class="intro-text">
@@ -20,6 +19,14 @@
                                 <i class="ion-ios-personadd"></i>
                             </span>
                         </button>
+                    </li>
+                    <li class="single-player existing-player"
+                        ng-repeat="player in playersListDataArray">
+                        <player-details
+                                data-player-first-name="{{player.firstName}}"
+                                data-player-nick-name="{{player.nickName}}"
+                                data-player-last-name="{{player.lastName}}">
+                        </player-details>
                     </li>
                 </ul>
             </div>
